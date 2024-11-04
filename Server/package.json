@@ -4,7 +4,9 @@
   "description": "Backend For Car Rental",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "nodemon -r dotenv/config bin/www",
+    "test": "node -r dotenv/config bin/www",
+    "start": "node -r dotenv/config bin/www"
   },
   "author": "Neobitose",
   "license": "ISC",
@@ -17,5 +19,8 @@
     "pg-hstore": "^2.3.4",
     "sequelize": "^6.37.5",
     "sequelize-cli": "^6.6.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.7"
   }
 }

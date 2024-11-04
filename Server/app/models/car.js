@@ -14,7 +14,6 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   Car.init({
-    id: DataTypes.UUID,
     plate: DataTypes.STRING,
     manufacture: DataTypes.STRING,
     model: DataTypes.STRING,
@@ -27,8 +26,8 @@ module.exports = (sequelize, DataTypes) => {
     available: DataTypes.BOOLEAN,
     type: DataTypes.STRING,
     year: DataTypes.INTEGER,
-    options: DataTypes.ARRAY,
-    specs: DataTypes.ARRAY
+    options: DataTypes.ARRAY(DataTypes.STRING),
+    specs: DataTypes.ARRAY(DataTypes.STRING)
   }, {
     sequelize,
     modelName: 'Car',
