@@ -52,7 +52,8 @@ async function getAllCars(req, res) {
 
 async function getFilterCars(req, res) {
     try {
-        const { driverType, date, timeRent, passanger } = req.body;
+        const { driverType, date, timeRent, passenger } = req.body;
+        console.log(req.query)
         let type = ""
         if (driverType == "true") {
             type = true
@@ -73,9 +74,9 @@ async function getFilterCars(req, res) {
                 [Op.lte]: `${date}T${timeRent}Z`
             };
         }        
-        if (passanger) {
+        if (passenger) {
             condition.capacity = {
-                [Op.gte]: passanger
+                [Op.gte]: passenger
             };
         }
         const cars = await Car.findAll({
