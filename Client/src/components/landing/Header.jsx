@@ -3,7 +3,7 @@ import Hero from './Hero'
 
 function Header() {
     return (
-        <header id="header" class="bg-info">
+        <header id="header" className="bg-info">
             <Navbar />
             <Hero />
         </header>
