@@ -1,15 +1,17 @@
 import { useState } from 'react'
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+
 import Landing from './components/Landing'
 import Filter from './components/Filter'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      {/* <Landing/> */}
-      <Filter/>
-    </>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Landing/>} />
+        <Route path="/filter" element={<Filter/>} />
+      </Routes>
+    </Router>
   )
 }
 

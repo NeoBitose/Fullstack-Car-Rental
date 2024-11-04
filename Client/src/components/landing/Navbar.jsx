@@ -1,3 +1,5 @@
+import { Link, useNavigate } from 'react-router-dom';
+
 function Navbar() {
     return (
         <nav className="navbar navbar-expand-lg bg-info">
@@ -20,6 +22,9 @@ function Navbar() {
                     </div>
                     <div className="offcanvas-body pt-1 pt-sm-2 ms-lg-auto">
                         <ul className="navbar-nav nav nav-pills">
+                            <li className="nav-item my-auto">
+                                <Link to="/" className="nav-link ms-lg-3 text-dark fw-normal">Home</Link>
+                            </li>
                             <li className="nav-item my-auto">
                                 <a href="#service" className="nav-link ms-lg-3 text-dark fw-normal">Our Services</a>
                             </li>

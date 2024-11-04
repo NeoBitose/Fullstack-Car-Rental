@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 function Hero() {
     return (
         <section id="Hero" className="hero d-lg-flex mt-3">
@@ -11,9 +13,9 @@ function Hero() {
                         terbaik dengan harga terjangkau. Selalu siap melayani kebutuhanmu
                         untuk sewa mobil selama 24 jam.
                     </p>
-                    <a href="/cars">
+                    <Link to="/filter">
                         <button className="btn btn-success">Mulai Sewa Mobil</button>
-                    </a>
+                    </Link>
                 </div>
             </div>
             <div className="img-hero">
