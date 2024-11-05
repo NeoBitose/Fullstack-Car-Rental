@@ -14,7 +14,7 @@ function Navbar() {
                         <span className="navbar-toggler-icon"></span>
                     </button>
                 </div>
-                <div className="offcanvas offcanvas-end w-50" tabindex="-1" id="offcanvasNavbar"
+                <div className="offcanvas offcanvas-end w-50" id="offcanvasNavbar"
                     aria-labelledby="offcanvasNavbarLabel">
                     <div className="offcanvas-header pb-1 pb-sm-2">
                         <h6 className="offcanvas-title fw-bold" id="offcanvasNavbarLabel">BCR</h6>

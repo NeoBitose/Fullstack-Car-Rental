@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 
-export function useFetchCar(filters) {
+function useFetchCar(filters) {
     const [cars, setCars] = useState([]);
     const [loading, setLoading] = useState(true);
 
@@ -39,3 +39,5 @@ export function useFetchCar(filters) {
 
     return { cars, loading };
 }
+
+export default useFetchCar

@@ -1,13 +1,15 @@
-import { useState } from 'react';
+import { useState, useContext } from 'react';
+import { CarContext } from '../../context/carContext';
 
-function FilterCard({ onFilterChange }) {
-    const [driverType, setDriverType] = useState("default");
-    const [date, setDate] = useState("");
-    const [timeRent, setTimeRent] = useState("");
-    const [passenger, setPassenger] = useState(0);
+function FilterCard() {
+    const { filters, setFilters } = useContext(CarContext);
+    const [driverType, setDriverType] = useState(filters.driverType);
+    const [date, setDate] = useState(filters.date);
+    const [timeRent, setTimeRent] = useState(filters.timeRent);
+    const [passenger, setPassenger] = useState(filters.passenger);
 
     const handleFilter = () => {
-        onFilterChange({ driverType, date, timeRent, passenger });
+        setFilters({ driverType, date, timeRent, passenger });
     };
 
     return (
