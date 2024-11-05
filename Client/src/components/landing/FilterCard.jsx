@@ -1,5 +1,5 @@
 import { useState, useContext } from 'react';
-import { CarContext } from '../../context/carContext';
+import { CarContext } from '../../context/CarContext';
 
 function FilterCard() {
     const { filters, setFilters } = useContext(CarContext);
