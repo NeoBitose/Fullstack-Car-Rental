@@ -53,7 +53,6 @@ async function getAllCars(req, res) {
 async function getFilterCars(req, res) {
     try {
         const { driverType, date, timeRent, passenger } = req.body;
-        console.log(req.query)
         let type = ""
         if (driverType == "true") {
             type = true
@@ -62,7 +61,7 @@ async function getFilterCars(req, res) {
         }
         const condition = {};
 
-        if (driverType) {
+        if (driverType && driverType != "default") {
             condition.available = type;
         }   
         if (date && !timeRent) {
@@ -92,7 +91,6 @@ async function getFilterCars(req, res) {
                 data: null,
             });
         }
-
         res.status(200).json({
             status: "Success",
             message: "Success get cars data",
