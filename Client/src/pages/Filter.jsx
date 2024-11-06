@@ -1,10 +1,10 @@
 import { useState } from 'react';
 
 import { CarProvider } from '../context/carContext';
-import FilterCard from './landing/FilterCard';
-import CarCard from './landing/CarCard';
-import Header from "./landing/Header"
-import Footer from "./landing/Footer"
+import FilterCard from '../components/FilterCard';
+import CarCard from '../components/CarCard';
+import Header from "../components/Header"
+import Footer from "../components/Footer"
 
 function ParentComponent() {
     return (

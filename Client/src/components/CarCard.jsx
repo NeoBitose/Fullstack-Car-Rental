@@ -1,17 +1,11 @@
 import { useContext } from 'react';
-import { CarContext } from '../../context/CarContext';
+import { CarContext } from '../context/carContext';
 
 function CarCard() {
     const { cars, loading } = useContext(CarContext);  // Akses cars dan loading dari context
 
-    // function NoData(){
-    //     if (cars.length ==0) {
-    //         return <p>No data Found</p>
-    //     }
-    // }
-
     if (loading) {
-        return <p>Loading...</p>;
+        return <div className="loading-container"><div className="loading-spinner"></div></div>;
     }
     return (
         <section className="cars mb-5">
